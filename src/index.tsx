@@ -4,15 +4,12 @@ import SeasonDisplay  from './SeasonDisplay';
 
 class App extends React.Component<any, any> {
 
-    getPosition: any = () => {
+    render(): any {
         window.navigator.geolocation.getCurrentPosition(
             (position) => console.log(position),
             (error) => console.log(error)
-        )
-    };
-
-    render(): any {
-        return <SeasonDisplay />
+        );
+        return <h1>Lattitude: </h1>
     }
 }
 
